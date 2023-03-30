@@ -128,3 +128,14 @@ label{
     color: black;
 }
 /* -----Confirm dislougue box End----- */
+/* Mobile view media query Start */
+@media screen and (max-width: 480px) {
+    .input-container input[type='text']{
+        width: 100%;
+    }
+    .input-container button{
+        width: 100%;
+        margin-top: 10px;
+    }
+}
+/* Mobile view media query end */
