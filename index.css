@@ -129,7 +129,7 @@ label{
 }
 /* -----Confirm dislougue box End----- */
 /* Mobile view media query Start */
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 400px) {
     .input-container input[type='text']{
         width: 100%;
     }
