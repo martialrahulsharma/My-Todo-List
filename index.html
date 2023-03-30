@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To Do List</title>
+    <link rel="stylesheet"  href="./index.css" >
+    <script src="./index.js" defer ></script>
+    <script src="https://kit.fontawesome.com/34bbb8e80c.js" crossorigin="anonymous" defer></script>
+</head>
+<body>
+    <div class="container">
+        <div class="input-container">
+            <div id="confirm" class="displayNone">
+                <div id="message">Are you sure, do you want to Restore</div>
+                <div id="yesNoButton">
+                    <button id="yes">Yes</button>
+                    <button id="no">No</button>
+                </div>
+            </div>
+            <form onsubmit="submitHandler(event)">
+                <input type="text" name="todoName" id="todoName" placeholder="Add Your Todo List..."/>
+                <button type="button" id="submitButton" >Add</button> 
+                <button type="button" id="reStoreButton" >Restore All</button> 
+                <button type="button" class="displayNone" id="updateCancleButtonId" onclick="updateCancelHandler()" >Cancel</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

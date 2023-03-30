@@ -1,0 +1,130 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    background: url('./image/wallpaperflare.com_wallpaper.jpg');
+    background-position: center;
+    position: relative;
+    height: 500px;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    background: rgb(194, 194, 243);
+    /* background: transparent; */
+    width: 50%;
+    margin-top: 20px;
+    padding-bottom: 20px;
+    border-radius: 20px;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+}
+
+.input-container{
+    display: flex;
+    flex-direction: row;
+    margin: 20px 20px;
+    background: rgb(255, 255, 255);
+    padding: 20px;
+    box-shadow: rgba(141, 140, 140, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+    border-radius: 10px;
+    
+}
+
+.input-container input[type='text']{
+    width: 300px;
+    height: 40px;
+    border: 1px solid;
+    font-size:larger;
+    padding: 0px 5px 0px 5px;
+    border-radius: 10px;
+}
+
+.input-container button{
+    width: 100px;
+    height: 40px;
+    border: 0ch;
+    font-size:larger;
+    background-color: rgb(255, 30, 0);
+    border-radius: 10px;
+}
+
+.dispalyFlex{
+    display: flex;
+}
+
+.displayNone{
+    display: none;
+}
+
+.textDexorationLineThrough{
+    text-decoration: line-through;
+}
+.input-container button:hover{
+    cursor: pointer;
+    background-color: blue;
+}
+
+.list-container{
+    margin: 2px 20px;
+    background: rgb(255, 255, 255);
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.right-shift{
+    float: right;
+    margin-left: 5px;
+    border: 0px;
+}
+
+.right-shift:hover{
+    cursor: pointer;
+}
+
+label{
+    font-weight: bolder;
+}
+
+/* -----Confirm dislougue box Start----- */
+#confirm{
+    flex-direction: column;
+    justify-content: center;
+    height: 100px;
+    position: absolute;
+    margin-top: 100px;
+    background:  rgb(194, 194, 243, 0.8);
+    border: 2px solid black;
+    padding: 10px;
+}
+
+.input-container #confirm > #yesNoButton{
+    display: flex;
+    column-gap: 20px;
+    justify-content: flex-end;
+    margin-top: 15px;
+}
+#confirm button{
+    width: 100px;
+    height: 40px;
+    border: 0ch;
+    font-size:larger;
+    background-color: rgb(255, 30, 0);
+    border-radius: 10px;
+}
+
+#confirm button:hover{
+    background-color: blue;
+}
+#confirm > #message{
+    font-weight:bold;
+    font-size:x-large;
+    color: black;
+}
+/* -----Confirm dislougue box End----- */
