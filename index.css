@@ -129,13 +129,17 @@ label{
 }
 /* -----Confirm dislougue box End----- */
 /* Mobile view media query Start */
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 480px) {
     .input-container input[type='text']{
         width: 100%;
     }
     .input-container button{
-        width: 100%;
+        width: 40%;
         margin-top: 10px;
+    }
+    .container{
+        width: 90%;
+        
     }
 }
 /* Mobile view media query end */
