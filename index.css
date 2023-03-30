@@ -5,7 +5,7 @@
 }
 
 body{
-    background: url('./image/wallpaperflare.com_wallpaper.jpg');
+    background: url('wallpaperflare.com_wallpaper.jpg');
     background-position: center;
     position: relative;
     height: 500px;
