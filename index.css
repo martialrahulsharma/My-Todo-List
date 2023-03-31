@@ -73,7 +73,7 @@ body{
     opacity: 0.5;
 }
 
-/* ------for dynemic use start------- */
+/* ------for dynemic use end------- */
 .input-container button:hover{
     cursor: pointer;
     background-color: blue;
@@ -115,7 +115,7 @@ label{
     padding: 10px;
 }
 
-.input-container #confirm > #yesNoButton{
+#confirm > #yesNoButton{
     display: flex;
     column-gap: 20px;
     justify-content: flex-end;
@@ -132,6 +132,7 @@ label{
 
 #confirm button:hover{
     background-color: blue;
+    cursor: pointer;
 }
 #confirm > #message{
     font-weight:bold;
@@ -153,12 +154,14 @@ label{
         
     }
     #confirm{
-        margin-left: 0px;
+        margin-top: 150px;
+        margin-left: 40px;
         width: 70%;
     }
-    .input-container #confirm > #yesNoButton{
+    #confirm > #yesNoButton{
         margin-top: -20px;
         column-gap: 10px;
+        margin-left: 20px;
     }
 }
 /* Mobile view media query end */

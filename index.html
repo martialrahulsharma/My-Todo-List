@@ -12,19 +12,20 @@
 <body>
     <div class="container">
         <div class="input-container">
-            <div id="confirm" class="displayNone">
-                <div id="message">Are you sure, do you want to Restore?</div>
-                <div id="yesNoButton">
-                    <button id="yes">Yes</button>
-                    <button id="no">No</button>
-                </div>
-            </div>
             <form onsubmit="submitHandler(event)">
                 <input type="text" name="todoName" id="todoName" placeholder="Add Your Todo List..."/>
                 <button type="button" id="submitButton" >Add</button> 
                 <button type="button" id="reStoreButton" >Restore All</button> 
                 <button type="button" class="displayNone" id="updateCancleButtonId" onclick="updateCancelHandler()" >Cancel</button>
             </form>
+        </div>
+        <div class="todoListContainer"></div>
+        <div id="confirm" class="displayNone">
+            <div id="message">Are you sure, do you want to Restore?</div>
+            <div id="yesNoButton">
+                <button id="yes">Yes</button>
+                <button id="no">No</button>
+            </div>
         </div>
     </div>
 </body>

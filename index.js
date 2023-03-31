@@ -10,6 +10,9 @@ let restoreButton = document.querySelector('#reStoreButton');
 let restoreConfirmBox = document.querySelector('#confirm');
 let restoreYesConfirmBox = document.querySelector('#yes');
 let restoreNoConfirmBox = document.querySelector('#no');
+let inputContainer = document.querySelector('.input-container');
+let todoListContainer = document.querySelector('.todoListContainer');
+// let container = document.querySelector('.container');
 
 let checkUpdateId = 0;
 let todoNameInputField = document.querySelector('#todoName');
@@ -91,6 +94,8 @@ const getdataFromLocalStorage = () =>{
 const reStoteTodoListHandler = (event) => {
     event.preventDefault();
     restoreConfirmBox.className='displayFlex';
+    inputContainer.classList.add('pointerEventNone');
+    todoListContainer.classList.add('pointerEventNone');
 }
 
 const restoreYesButton = () =>{
@@ -107,13 +112,17 @@ const restoreYesButton = () =>{
         setTodoList(allTodoList);
     }
     restoreConfirmBox.className='displayNone';
+    inputContainer.classList.remove('pointerEventNone');
+    todoListContainer.classList.remove('pointerEventNone');
 }
 const restoreNoButton = () =>{
     restoreConfirmBox.className='displayNone';
+    inputContainer.classList.remove('pointerEventNone');
+    todoListContainer.classList.remove('pointerEventNone');
 }
 
 const setTodoList = (todoName) => {
-    let container = document.querySelector('.container');
+    let container = document.querySelector('.todoListContainer');
     if (todoName !== null && todoName.length !== 0){
         todoName.map((elem, index) => {
             if(document.getElementById(index)){
@@ -131,6 +140,7 @@ const setTodoList = (todoName) => {
         })
     }
 }
+
 
 submitButton.addEventListener('click', submitHandler);
 reStoreButton.addEventListener('click', reStoteTodoListHandler);
