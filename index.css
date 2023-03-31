@@ -55,6 +55,7 @@ body{
     border-radius: 10px;
 }
 
+/* ------for dynemic use start------- */
 .dispalyFlex{
     display: flex;
 }
@@ -66,6 +67,13 @@ body{
 .textDexorationLineThrough{
     text-decoration: line-through;
 }
+
+.pointerEventNone{
+    pointer-events: none;
+    opacity: 0.5;
+}
+
+/* ------for dynemic use start------- */
 .input-container button:hover{
     cursor: pointer;
     background-color: blue;
@@ -94,11 +102,14 @@ label{
 
 /* -----Confirm dislougue box Start----- */
 #confirm{
+    /* display: flex; */
     flex-direction: column;
     justify-content: center;
     height: 100px;
     position: absolute;
+    /* margin: auto ; */
     margin-top: 100px;
+    margin-left: 100px;
     background:  rgb(194, 194, 243, 0.8);
     border: 2px solid black;
     padding: 10px;
@@ -140,6 +151,14 @@ label{
     .container{
         width: 90%;
         
+    }
+    #confirm{
+        margin-left: 0px;
+        width: 70%;
+    }
+    .input-container #confirm > #yesNoButton{
+        margin-top: -20px;
+        column-gap: 10px;
     }
 }
 /* Mobile view media query end */
