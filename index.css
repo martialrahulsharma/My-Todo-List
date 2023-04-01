@@ -77,6 +77,8 @@ body{
 .input-container button:hover{
     cursor: pointer;
     background-color: blue;
+    animation-name: buttonBgChange;
+    animation-duration: 1s;
 }
 
 .list-container{
@@ -84,6 +86,11 @@ body{
     background: rgb(255, 255, 255);
     padding: 10px;
     border-radius: 10px;
+}
+
+.list-container button:hover{
+    animation-name: deleteEditButtonAnima;
+    animation-duration: 1s;
 }
 
 .right-shift{
@@ -138,6 +145,8 @@ label{
 #confirm button:hover{
     background-color: blue;
     cursor: pointer;
+    animation-name: buttonBgChange;
+    animation-duration: 1s;
 }
 #confirm > #message{
     font-weight:bold;
@@ -147,50 +156,15 @@ label{
 /* -----Confirm dislougue box End----- */
 
 /* ------Animation design start------- */
-
-    
-    /* other properties */
-    /* width: 300px;
-    height: 100px;
-    border-radius: 10px;
-    position: absolute;
-    left: 0; 
-    right: 0; 
-    margin-left: auto;
-    margin-right: auto;  */
-  
-
-  
-  /* @keyframes my-animation {
-    from {
-      background-color: #ff7a59;
-      width: 300px;
-      top: 10px;
-    }
-    to {
-      background-color: #33475b;
-      width: 50px;
-      top: 100px;
-    }
-  } */
-@keyframes confirm{
-    from {
-        width: 0px;
-        top: -20px;
-        height: 0px;
-        position: absolute;
-        left: 150px;
-      }
-      to {
-        width: 70%;
-        height: 120px;
-      }
-    
+@keyframes buttonBgChange{
+    from {background-color: red;}
+    to {background-color: blue;}
 }
+
 /* ------Animation design end------- */
 
 /* Mobile view media query Start */
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 720px) {
     .input-container input[type='text']{
         width: 100%;
     }
