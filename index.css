@@ -120,11 +120,11 @@ label{
     border: 2px solid black;
     padding: 10px;
 
-    animation-name: confirm;
-    animation-duration: 250ms;
+    /* animation-name: confirm;
+    animation-duration: 500ms; */
     /* animation-direction: alternate; */
     /* animation-iteration-count: infinite; */
-    animation-timing-function: linear;
+    /* animation-timing-function: linear; */
 }
 
 #confirm > #yesNoButton{
@@ -160,6 +160,25 @@ label{
     from {background-color: red;}
     to {background-color: blue;}
 }
+.confirmBoxAnimate{
+    animation-name: confirm;
+    animation-duration: 500ms;
+}
+@keyframes confirm {
+    from {transform: rotate(0deg);}
+    to {transform: rotate(360deg);}
+}
+/* ------------------ */
+.confirmBoxAnimateReverse{
+    animation-name: confirmBoxAnimateReverse;
+    animation-duration: 500ms;
+}
+@keyframes confirmBoxAnimateReverse {
+    from {transform: rotate(360deg);}
+    to {transform: rotate(0deg);}
+}
+
+
 
 /* ------Animation design end------- */
 

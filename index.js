@@ -96,7 +96,20 @@ const reStoteTodoListHandler = (event) => {
     restoreConfirmBox.className='displayFlex';
     inputContainer.classList.add('pointerEventNone');
     todoListContainer.classList.add('pointerEventNone');
+    restoreConfirmBox.classList.add('confirmBoxAnimate');
 }
+const confirmBoxAnimateHandler = () =>{
+    if(restoreConfirmBox.classList.contains('confirmBoxAnimate')){
+        restoreConfirmBox.classList.add('confirmBoxAnimateReverse');
+        restoreConfirmBox.classList.remove('confirmBoxAnimate');
+        setTimeout(()=>{
+            restoreConfirmBox.className = 'displayNone';   
+        }, 500)
+    }
+    inputContainer.classList.remove('pointerEventNone');
+    todoListContainer.classList.remove('pointerEventNone');
+}
+
 
 const restoreYesButton = () =>{
     reStoredTodoList = JSON.parse(localStorage.getItem('recycleBinTodoList'));
@@ -111,14 +124,7 @@ const restoreYesButton = () =>{
         localStorage.setItem('allTodoList', JSON.stringify(allTodoList));
         setTodoList(allTodoList);
     }
-    restoreConfirmBox.className='displayNone';
-    inputContainer.classList.remove('pointerEventNone');
-    todoListContainer.classList.remove('pointerEventNone');
-}
-const restoreNoButton = () =>{
-    restoreConfirmBox.className='displayNone';
-    inputContainer.classList.remove('pointerEventNone');
-    todoListContainer.classList.remove('pointerEventNone');
+    confirmBoxAnimateHandler();
 }
 
 const setTodoList = (todoName) => {
@@ -145,5 +151,5 @@ const setTodoList = (todoName) => {
 submitButton.addEventListener('click', submitHandler);
 reStoreButton.addEventListener('click', reStoteTodoListHandler);
 restoreYesConfirmBox.addEventListener('click', restoreYesButton);
-restoreNoConfirmBox.addEventListener('click', restoreNoButton);
+restoreNoConfirmBox.addEventListener('click', confirmBoxAnimateHandler);
 getdataFromLocalStorage();
