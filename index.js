@@ -147,7 +147,6 @@ const setTodoList = (todoName) => {
     }
 }
 
-
 submitButton.addEventListener('click', submitHandler);
 reStoreButton.addEventListener('click', reStoteTodoListHandler);
 restoreYesConfirmBox.addEventListener('click', restoreYesButton);
